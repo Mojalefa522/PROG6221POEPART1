@@ -4,8 +4,18 @@ namespace PROG6221POEPART1
 {
     class ChatBot
     {
+        void ShowTyping()
+        {
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.WriteLine("Emmie is typing...");
+            Console.ResetColor();
+            System.Threading.Thread.Sleep(700);
+        }
+
         void TypeBotReply(string message)
         {
+            ShowTyping();
+
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.Write("Emmie");
             Console.ResetColor();
@@ -83,7 +93,7 @@ namespace PROG6221POEPART1
                     break;
 
                 case "0":
-                    TypeBotReply("Goodbye! Stay safe online.");
+                    TypeBotReply("Goodbye! Stay safe online :).");
                     running = false;
                     break;
 
