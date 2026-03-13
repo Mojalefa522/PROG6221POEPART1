@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Media;
 
 namespace PROG6221POEPART1
 {
@@ -11,6 +12,25 @@ namespace PROG6221POEPART1
 
             name = name.Trim().ToLower();
             return char.ToUpper(name[0]) + name.Substring(1);
+        }
+
+        static void PlayWelcomeAudio()
+        {
+            try
+            {
+                string path = System.IO.Path.Combine(
+                    AppDomain.CurrentDomain.BaseDirectory,
+                    "welcome.wav"
+                );
+
+                SoundPlayer player = new SoundPlayer(path);
+                player.Load();
+                player.PlaySync();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Audio could not be played: " + ex.Message);
+            }
         }
 
         static void ShowBanner()
@@ -39,6 +59,8 @@ namespace PROG6221POEPART1
 
         static void Main(string[] args)
         {
+            PlayWelcomeAudio();
+
             ShowBanner();
 
             Console.Write("Please enter your name: ");
