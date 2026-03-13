@@ -23,13 +23,15 @@ namespace PROG6221POEPART1
                     "welcome.wav"
                 );
 
-                SoundPlayer player = new SoundPlayer(path);
-                player.Load();
-                player.PlaySync();
+                if (System.IO.File.Exists(path))
+                {
+                    SoundPlayer player = new SoundPlayer(path);
+                    player.Load();
+                    player.PlaySync();
+                }
             }
-            catch (Exception ex)
+            catch
             {
-                Console.WriteLine("Audio could not be played: " + ex.Message);
             }
         }
 
@@ -60,7 +62,6 @@ namespace PROG6221POEPART1
         static void Main(string[] args)
         {
             PlayWelcomeAudio();
-
             ShowBanner();
 
             Console.Write("Please enter your name: ");
@@ -74,7 +75,7 @@ namespace PROG6221POEPART1
             Console.WriteLine($": Hello {userName}! Welcome to the cybersecurity chatbot.");
             Console.WriteLine();
 
-            ChatBot bot = new ChatBot();
+            ChatBot bot = new ChatBot(userName);
             bot.Start();
 
             Console.ReadKey();

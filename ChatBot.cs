@@ -4,6 +4,13 @@ namespace PROG6221POEPART1
 {
     class ChatBot
     {
+        string userName;
+
+        public ChatBot(string name)
+        {
+            userName = name;
+        }
+
         void ShowTyping()
         {
             Console.ForegroundColor = ConsoleColor.DarkGray;
@@ -47,7 +54,6 @@ namespace PROG6221POEPART1
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+");
             Console.ResetColor();
-
             Console.WriteLine();
         }
 
@@ -77,28 +83,28 @@ namespace PROG6221POEPART1
             switch (choice)
             {
                 case "1":
-                    TypeBotReply("Strong passwords should include letters, numbers, and symbols.");
+                    TypeBotReply($"{userName}, strong passwords should include letters, numbers, and symbols.");
                     break;
 
                 case "2":
-                    TypeBotReply("Phishing scams try to trick you into revealing personal information.");
+                    TypeBotReply($"{userName}, phishing scams try to trick you into revealing personal information.");
                     break;
 
                 case "3":
-                    TypeBotReply("Always check for HTTPS when entering sensitive information online.");
+                    TypeBotReply($"{userName}, always check for HTTPS when entering sensitive information online.");
                     break;
 
                 case "4":
-                    TypeBotReply("I'm doing great! I'm here to help you stay safe online.");
+                    TypeBotReply($"I'm doing great, {userName}! I'm here to help you stay safe online.");
                     break;
 
                 case "0":
-                    TypeBotReply("Goodbye! Stay safe online :).");
+                    TypeBotReply($"Goodbye, {userName}! Stay safe online :).");
                     running = false;
                     break;
 
                 default:
-                    TypeBotReply("I didn't understand that option. Try typing a number or a topic name.");
+                    TypeBotReply($"{userName}, I didn't understand that option. Try typing a number or a topic name.");
                     break;
             }
         }
