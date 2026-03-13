@@ -4,6 +4,15 @@ namespace PROG6221POEPART1
 {
     class Program
     {
+        static void TypeText(string message)
+        {
+            foreach (char c in message)
+            {
+                Console.Write(c);
+                System.Threading.Thread.Sleep(20);
+            }
+            Console.WriteLine();
+        }
         static void Main(string[] args)
         {
             Console.WriteLine("================================================================");
@@ -48,28 +57,28 @@ namespace PROG6221POEPART1
                 switch (choice)
                 {
                     case "1":
-                        Console.WriteLine("Emmie: Strong passwords should include letters, numbers, and symbols.");
+                        TypeText("Emmie: Strong passwords should include letters, numbers, and symbols.");
                         break;
 
                     case "2":
-                        Console.WriteLine("Emmie: Phishing scams try to trick you into revealing personal information.");
+                        TypeText("Emmie: Phishing scams try to trick you into revealing personal information.");
                         break;
 
                     case "3":
-                        Console.WriteLine("Emmie: Always check for HTTPS when entering sensitive information online.");
+                        TypeText("Emmie: Always check for HTTPS when entering sensitive information online.");
                         break;
 
                     case "4":
-                        Console.WriteLine("Emmie: I'm doing great! I'm here to help you stay safe online.");
+                        TypeText("Emmie: I'm doing great! I'm here to help you stay safe online.");
                         break;
 
                     case "0":
-                        Console.WriteLine("Emmie: Goodbye! Stay safe online.");
+                        TypeText("Emmie: Goodbye! Stay safe online.");
                         running = false;
                         break;
 
                     default:
-                        Console.WriteLine("Emmie: I didn't understand that option.");
+                        TypeText("Emmie: I didn't understand that option.");
                         break;
                 }
             }
