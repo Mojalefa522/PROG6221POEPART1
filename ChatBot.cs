@@ -104,7 +104,7 @@ namespace PROG6221POEPART1
                     break;
 
                 default:
-                    TypeBotReply($"{userName}, I didn't understand that option. Try typing a number or a topic name.");
+                    TypeBotReply($"{userName}, I didn't understand that option. Try typing a number or a topic name.or EXIT");
                     break;
             }
         }
