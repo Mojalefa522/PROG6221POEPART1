@@ -106,7 +106,9 @@ A successful CI run confirms that the project compiles without errors.
 
 \---
 
+## CI Workflow Status
 
+\---
 
 \## Author
 
