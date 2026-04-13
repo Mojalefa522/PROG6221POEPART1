@@ -16,23 +16,23 @@ namespace PROG6221POEPART1
 
         static void PlayWelcomeAudio()
         {
-            try
-            {
-                string path = System.IO.Path.Combine(
-                    AppDomain.CurrentDomain.BaseDirectory,
-                    "welcome.wav"
-                );
+            //try
+            //{
+            //    string path = System.IO.Path.Combine(
+            //        AppDomain.CurrentDomain.BaseDirectory,
+            //        "welcome.wav"
+            //    );
 
-                if (System.IO.File.Exists(path))
-                {
-                    SoundPlayer player = new SoundPlayer(path);
-                    player.Load();
-                    player.PlaySync();
-                }
-            }
-            catch
-            {
-            }
+            //    if (System.IO.File.Exists(path))
+            //    {
+            //        SoundPlayer player = new SoundPlayer(path);
+            //        player.Load();
+            //        player.PlaySync();
+            //    }
+            //}
+            //catch
+            //{
+            //}
         }
 
         static void ShowBanner()
@@ -51,9 +51,9 @@ namespace PROG6221POEPART1
             Console.WriteLine("||                CYBERSECURITY CHATBOT SYSTEM                ||");
             Console.Write("||                         ");
             Console.ForegroundColor = ConsoleColor.Blue;
-            Console.Write("EMMIE");
+            Console.Write("BOTMANTA");
             Console.ResetColor();
-            Console.WriteLine("                              ||");
+            Console.WriteLine("                           ||");
             Console.WriteLine("||                                                            ||");
             Console.WriteLine("================================================================");
             Console.WriteLine();
@@ -70,7 +70,7 @@ namespace PROG6221POEPART1
 
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.Blue;
-            Console.Write("Emmie");
+            Console.Write("BotManta:");
             Console.ResetColor();
             Console.WriteLine($": Hello {userName}! Welcome to the cybersecurity chatbot.");
             Console.WriteLine();
