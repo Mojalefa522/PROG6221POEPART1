@@ -107,6 +107,7 @@ A successful CI run confirms that the project compiles without errors.
 \---
 
 ## CI Workflow Status
+![CI Success](ci-workflow-success.png)
 
 \---
 
