@@ -4,7 +4,7 @@
 
 \## Overview
 
-This project is a C# console-based cybersecurity awareness chatbot named \*\*Emmie\*\*.  
+This project is a C# console-based cybersecurity awareness chatbot named \*\*BotManta\*\*.  
 
 The chatbot helps users learn about important cybersecurity topics such as passwords, phishing, and safe browsing.
 
