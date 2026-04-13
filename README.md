@@ -1,4 +1,4 @@
-\# Cybersecurity Awareness Chatbot (Emmie)
+\# Cybersecurity Awareness Chatbot (BotManta)
 
 
 
@@ -7,11 +7,6 @@
 This project is a C# console-based cybersecurity awareness chatbot named \*\*BotManta\*\*.  
 
 The chatbot helps users learn about important cybersecurity topics such as passwords, phishing, and safe browsing.
-
-
-
-The program was developed as part of the \*\*PROG6221 Programming POE assignment\*\*.
-
 
 
 \---
